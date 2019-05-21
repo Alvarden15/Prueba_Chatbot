@@ -41,9 +41,10 @@ l=WordNetLemmatizer()
 #Se procesan los tokens y devuelve tokens normalizados
 def LemTokens(tks):
     return [l.lemmatize(t) for t in tks] 
-
+#Se crea el diccionario
 punt=dict((ord(p),None) for p in string.punctuation)
 
+#Se ejecuta la normalizacion (se traduce de tal forma que se eviten problemas)
 def LemNormalizacion(text):
     return LemTokens(n.word_tokenize(text.lower().translate(punt)))
 
