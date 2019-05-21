@@ -9,8 +9,12 @@ import warnings
 from nltk.chat.util import Chat, reflections
 
 ##Se importan 2 cosas: la clase Chat (viene con la libreria) y reflections, su diccionario
-from sklearn.feature_extraction.text import TfidfVectorizer
 
+
+from sklearn.feature_extraction.text import TfidfVectorizer as tfd
+
+#Se lee la respuesta del usuario y las compara con las palabras del corpus (el archivo que lee)
+from sklearn.metrics.pairwise import cosine_similarity as cs
 
 
 warnings.filterwarnings("ignore")
@@ -31,37 +35,17 @@ l=WordNetLemmatizer()
 
 
 #Se puede modificar el diccionario de la siguiente manera:
-reflections={
-    "yo soy" : "tu eres",
-    "yo fui" : "tu fuiste",
-    "yo seré" : "tu seras",
-    "yo sere" : "tu seras",
-    "yo":"tu",
-    "mi":"tu",
-    "tu eres" : "yo soy",
-    "tu fuiste" : "yo fui",
-    "tu seras" : "yo seré",
-    "tu":"yo",
-    "tuyo":"mio",
-    "tu":"mio",
-    "ellos":"ellos",
-    "nosotros":"ustedes",
-    "mio":"tuyo",
-    "mi":"tu",
-    "nos":"se",
-    "ellas":"ellas",
-    "me":"te",
-    "mia":"tuya",
-    "somos":"son",
-    "fuimos":"fueron",
-    "seremos":"seran",
-
-}
 #Puede agregar otros
 
 
+#Se procesan los tokens y devuelve tokens normalizados
 def LemTokens(tks):
     return [l.lemmatize(t) for t in tks] 
+
+punt=dict((ord(p),None) for p in string.punctuation)
+
+def LemNormalizacion(text):
+    return LemTokens(n.word_tokenize(text.lower().translate(punt)))
 
 
 
@@ -69,14 +53,52 @@ Saludos={"hola","hey","habla","que tal","buenas"}
 Respuestas=["Buenas","Bienvenido/a","Hola","Hey","Un gusto conocerte"]
 Despedida=["Nos vemos","Adios","Un gusto hablar contigo","Cerrando sección"]
 Desentendido=["Lo siento, puedes repetir eso?","Puedes decir otra cosa,porfa?","No se si lo entiendo","Como?","Otra pregunta,por favor","Habla español, por favor"]
+Agradecimiento=["De nada","A tu servicio","No hay de que"]
 
-#def saludo_usuario(oracion):
-    #for word in oracion.words:
+def saludo_usuario(oracion):
+    for word in oracion.split():
+        if word.lower() in Saludos:
+            return random.choice(Respuestas)
         
+def conversacion(respuesta):
+    resRob=''
+    sent_token.append(respuesta)
+    fv=tfd(tokenizer=LemNormalizacion)
+    fid=fv.fit_transform(sent_token)
+    valores=cs(fid[-1],fid)
+    index=valores.argsort()[0][-2]
+    flat=valores.flatten()
+    flat.sort()
+    request=flat[-2]
+    if(request==0):
+        resRob+=random.choice(Desentendido)
+        return resRob
+    else:
+        resRob+=sent_token[index]
+        return resRob
 
+flag=True
+print("Bienenido/a a esta prueba de chatbot en Python. Algunas funciones siguen en desarrollo. Si lo que quieres es salir, escribe 'adios'")
+while (flag==True):
+    respuesta=input()
+    respuesta=respuesta.lower()
+    if(respuesta!='adios'):
+        if(respuesta=='gracias'):
+            print("EDI:"+random.choice(Agradecimiento))
+        elif(respuesta=='jojo'):
+            print("EDI: So no chi no sadame\nEDI: JOOOOOOOOOOOOOOOJO")
+        else:
+            if(saludo_usuario(respuesta)!=None):
+                print("EDI:"+saludo_usuario(respuesta))
 
+            else:
+                print("EDI:",end="")
+                print(conversacion(respuesta))
+                sent_token.remove(respuesta)
 
-if(23>20):
-    print('Cierto')
-else:
-    print('Falso')
+    else:
+        flag=False
+        print("EDI:"+random.choice(Despedida))
+        
+    
+
