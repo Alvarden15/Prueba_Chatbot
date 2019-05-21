@@ -15,10 +15,19 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 warnings.filterwarnings("ignore")
 
-n.download()
 
-with open('FIA.txt','r',encoding='utf-8',errors='ignore') as fin:
-    raw= fin.read().lower()
+fin=open('FIA.txt','r',encoding='utf-8',errors='ignore')
+raw= fin.read().lower() #El lower vuelve todas las letras en minuscula
+
+
+sent_token=n.sent_tokenize(raw) #Las vuelve oraciones
+word_token=n.word_tokenize(raw) #Las vuelve palabras
+
+sent_token[:2] #Cuantas oraciones como maximo el bot puede enviar
+
+word_token[:5] #Cuantas palabras en clave puede reconocer a la vez
+
+l=WordNetLemmatizer()
 
 
 #Se puede modificar el diccionario de la siguiente manera:
@@ -51,13 +60,15 @@ reflections={
 #Puede agregar otros
 
 
-
+def LemTokens(tks):
+    return [l.lemmatize(t) for t in tks] 
 
 
 
 Saludos={"hola","hey","habla","que tal","buenas"}
 Respuestas=["Buenas","Bienvenido/a","Hola","Hey","Un gusto conocerte"]
 Despedida=["Nos vemos","Adios","Un gusto hablar contigo","Cerrando sección"]
+Desentendido=["Lo siento, puedes repetir eso?","Puedes decir otra cosa,porfa?","No se si lo entiendo","Como?","Otra pregunta,por favor","Habla español, por favor"]
 
 #def saludo_usuario(oracion):
     #for word in oracion.words:
