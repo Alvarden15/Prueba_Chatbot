@@ -20,7 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity as cs
 warnings.filterwarnings("ignore")
 
 
-fin=open('FIA.txt','r',encoding='utf-8',errors='ignore')
+fin=open('FIA.txt','r+',encoding='utf-8',errors='ignore')
 raw= fin.read().lower() #El lower vuelve todas las letras en minuscula
 
 

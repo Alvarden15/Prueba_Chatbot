@@ -24,6 +24,7 @@ Adicionalmente, la carrera le proveerá de todo el fundamento teórico, además de 
 
 Este objetivo se enmarca en los principios rectores de la Universidad de San Martín de Porres y de la Facultad de Ingeniería y Arquitectura, orientados a la formación de profesionales altamente calificados para satisfacer la demanda que requiere la sociedad. 
 
+
 Ingenieria Civil
 La carrera de Ingeniería Civil en la USMP te permite ser un profesional responsable del planeamiento, diseño y construcción de todas las obras civiles que el país necesita, de manera sostenida y sustentable. Un País que progresa, es una sociedad que busca el bienestar de sus ciudadanos y tiene la necesidad de proyectar y construir viviendas, escuelas, edificios, hospitales, carreteras, puentes, aeropuertos, puertos, centrales hidroeléctricas, sistemas de irri­gación, etc. 
 
@@ -34,6 +35,7 @@ Duración: 10 semestres
 Tipo de enseñanza : Presencial 
 Régimen de estudios: Semestral 
 Idioma: Español 
+
 
 Ingeniera industrial
 La Escuela de Ingeniería Industrial de la Universidad de San Martín de Porres es la Unidad Académica encargada de la formación profesional de nuevos ingenieros industriales con las competencias requeridas para su éxito laboral y bajo los valores y principios de nuestra universidad. Así mismo la Escuela está comprometida con el desarrollo nacional a través de la creación de nuevos conocimientos, su aplicación, la innovación y la transmisión de estos para beneficio de la sociedad.
@@ -49,6 +51,7 @@ Para ello, se trabaja con los criterios de acreditación de organismos internacio
 
 La acreditación es un proceso continuo en el tiempo y permite posicionar al programa a la par que los mejores programas de América y Europa. Asimismo, requiere la colaboración de todos los constituyentes: alumnos, plana docente, graduados, empleadores y comité asesor externo, unidos como una gran familia EPICS para lograr nuestro objetivo. A todos los involucrados se les exhorta a redoblar esfuerzos, a sentirse comprometidos en la participación e información sobre el proceso.
 
+
 Facultad
 La Universidad de San Martín de Porres y especialmente la Facultad de Ingeniería y Arquitectura le expresa su más cordial bienvenida a este site.
 
@@ -58,14 +61,6 @@ El avance de la ciencia y la tecnología, que se produce de manera cada vez más i
 
 La vocación de servicio de la Universidad de San Martín de Porres impulsa a la Institución a forjar líderes con una visión integradora, comprometidos con el país y dispuestos a contribuir decisivamente con el progreso y el desarrollo de la sociedad peruana.
 
-Mision
-
-Formar profesionales competentes, con solidos valores humanisticos, eticos, morales y civicos.
-Contribuir a la creación de conocimientos a través de la investigación y promover la difusión de la ciencia, la tecnología y la cultura.
-Proyectar nuestra acción a la comunidad, propiciando la construcción de una sociedad moderna y equitativa.
-
-Vision
-Figurar en el ranking Quacquarelli Symonds entre las 100 mejores universidades del mundo o entre las 10 mejores de América Latina para el año 2021.
 
 
 Ubicaciones:
@@ -80,3 +75,17 @@ Especialidades
 Se encuentra en ....
 Laboratorios
 Se encuentra en ....
+
+
+Mision
+
+Formar profesionales competentes, con solidos valores humanisticos, eticos, morales y civicos.
+Contribuir a la creacion de conocimientos a través de la investigación y promover la difusion de la ciencia, la tecnologia y la cultura.
+Proyectar nuestra acción a la comunidad, propiciando la construcción de una sociedad moderna y equitativa.
+
+Vision
+Figurar en el ranking Quacquarelli Symonds entre las 100 mejores universidades del mundo o entre las 10 mejores de América Latina para el año 2021.
+
+
+
+
